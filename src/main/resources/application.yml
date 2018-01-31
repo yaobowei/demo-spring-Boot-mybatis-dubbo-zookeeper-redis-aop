@@ -1,0 +1,87 @@
+server:
+  port: 8080
+spring:
+  demo:
+    name: demo
+    url: jdbc:mysql://127.0.0.1:3306/demo?useUnicode=true&characterEncoding=utf8&characterResultSets=utf8&allowMultiQueries=true&multiStatementAllow=true&zeroDateTimeBehavior=convertToNull&useSSL=false&autoReconnect=true&failOverReadOnly=false
+    username: root
+    password: 123
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+  read:
+    name: demo
+    url: jdbc:mysql://127.0.0.1:3306/read?useUnicode=true&characterEncoding=utf8&characterResultSets=utf8&allowMultiQueries=true&multiStatementAllow=true&zeroDateTimeBehavior=convertToNull&useSSL=false&autoReconnect=true&failOverReadOnly=false
+    username: root
+    password: 123
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+  write:
+    name: demo
+    url: jdbc:mysql://127.0.0.1:3306/write?useUnicode=true&characterEncoding=utf8&characterResultSets=utf8&allowMultiQueries=true&multiStatementAllow=true&zeroDateTimeBehavior=convertToNull&useSSL=false&autoReconnect=true&failOverReadOnly=false
+    username: root
+    password: 123
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+  redis:
+    #Redis数据库索引(默认为0)
+    database: 0
+    #服务器地址
+    host: 127.0.0.1
+    #端口号
+    port: 6379
+    #链接密码
+    password: foobared
+    pool:
+      #链接池最大链接数（负数表示没有限制）
+      max-active: 8
+      #链接池最大空闲数
+      max-idle: 8
+      #链接池最大阻塞时间
+      max-wait: -1
+      #链接池最小链接数
+      min-idle: 0
+    #超时时间（毫秒）
+    timeout: 0
+
