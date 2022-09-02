@@ -23,7 +23,6 @@ import java.util.List;
  */
 
 @Service(value = "DemoService")
-
 public class DemoServiceImpl implements DemoService {
 
     //实例化mapper

@@ -3,6 +3,8 @@ package com.ybw.demo.utils.model;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
+
 /**
  * Created by yao on 2018/1/18
  *
@@ -11,7 +13,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Result<T> {
+public class Result<T> implements Serializable {
 
 
     /**

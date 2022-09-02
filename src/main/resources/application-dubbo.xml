@@ -17,6 +17,12 @@
 
     <!--  声明需要暴露的服务接口  -->
     <dubbo:service interface="com.ybw.demo.service.DemoService" ref="demoService"/>
+    <dubbo:service interface="com.ybw.demo.service.UserModelService" ref="userModelService"/>
+    <dubbo:service interface="com.ybw.demo.service.CommentModelService" ref="commentModelService"/>
+    <dubbo:service interface="com.ybw.demo.service.ContentModelService" ref="contentModelService"/>
     <!--  和本地 bean 一样实现服务  -->
     <bean id="demoService" class="com.ybw.demo.service.impl.DemoServiceImpl"/>
+    <bean id="userModelService" class="com.ybw.demo.service.impl.UserModelServiceImpl"/>
+    <bean id="commentModelService" class="com.ybw.demo.service.impl.CommentModelServiceImpl"/>
+    <bean id="contentModelService" class="com.ybw.demo.service.impl.ContentModelServiceImpl"/>
 </beans>
